@@ -1,42 +1,130 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+.app {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.app-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app-main {
   padding: 2rem;
+}
+
+.app-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
   text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.login-button, .logout-button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-button:hover, .logout-button:hover {
+  background-color: #219a52;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.login-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
 }
 
-.card {
-  padding: 2em;
+.auth-callback {
+  text-align: center;
+  padding: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard h1 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.merchant-info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.dashboard-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-section h3 {
+  color: #34495e;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 0.5rem;
+}
+
+.items-list, .orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-card, .order-card {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #27ae60;
+}
+
+.item-card h4, .order-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+}
+
+.item-card p, .order-card p {
+  margin: 0.25rem 0;
+  color: #7f8c8d;
+}
+
+.dashboard-loading, .dashboard-error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.dashboard-error {
+  color: #e74c3c;
 }
